@@ -10,18 +10,20 @@ console.log(girilenSayi);
 
 oyna.addEventListener("click", ()=>{
     if(sayi==girilenSayi.value){
-        sonuc.innerHTML="Tebrikler Doğru Tahmin Ettiniz";
+        sonuc.innerHTML="Tebrikler Doğru Tahmin Ettiniz.";
     }
     else if(sayi>girilenSayi.value){
-        sonuc.innerHTML="Yanlış Tahmin Ettiniz Daha BÜYÜK Bir Sayı Tahmin Ediniz";
-        hak=hak--;
+        sonuc.innerHTML="Yanlış Tahmin Ettiniz Daha BÜYÜK Bir Sayı Tahmin Ediniz.";
     }
     else if(girilenSayi.value>sayi){
-        sonuc.innerHTML="Yanlış Tahmin Ettiniz Daha KÜÇÜK Bir Sayı Tahmin Ediniz";
-        hak=hak--;
+        sonuc.innerHTML="Yanlış Tahmin Ettiniz Daha KÜÇÜK Bir Sayı Tahmin Ediniz.";
+    }
+
+    if(hak<10){
+        hak=hak+1;
     }
     else if(hak==10){
-        sonuc.innerHTML="Tahmin Hakkınız Kalmadı";
+        sonuc.innerHTML="Tahmin Hakkınız Dolmuştur."
     }
 
     console.log(hak);
